@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 class Rec
 {
     public:
@@ -14,6 +16,8 @@ class Rec
         int its_height;
 };
 
+void printMenu();
+
 int main()
 {
     Rec ob_rec;
@@ -24,4 +28,16 @@ int main()
     cin >> width;
     cout << "Write height of the rectangle" << endl;
     cin >> height;
+    ob_rec.set_width(width);
+    ob_rec.set_height(height);
+    printMenu();
+}
+
+void printMenu()
+{
+    cout << "***Menu***" << endl;
+    cout << "(1)Print Rectangle\n";
+    cout << "(2)Change parameters\n";
+    cout << "(3)Show Area\n";
+    cout << "(4)Quit\n";
 }
