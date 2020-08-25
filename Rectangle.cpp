@@ -16,6 +16,7 @@ class Rec
         int its_height;
 };
 
+void printRec(int width, int height);
 void printMenu();
 
 int main()
@@ -23,6 +24,7 @@ int main()
     Rec ob_rec;
     int width;
     int height;
+    int choice;
 
     cout << "Write width of the rectangle" << endl;
     cin >> width;
@@ -31,6 +33,9 @@ int main()
     ob_rec.set_width(width);
     ob_rec.set_height(height);
     printMenu();
+    @cin >> choice;
+    if (choice == 1)
+        printRec(width, height);
 }
 
 void printMenu()
@@ -39,5 +44,16 @@ void printMenu()
     cout << "(1)Print Rectangle\n";
     cout << "(2)Change parameters\n";
     cout << "(3)Show Area\n";
-    cout << "(4)Quit\n";
+    cout << "(4)Quit\n\n";
+}
+
+void printRec(int width, int height)
+{
+    for (height; height > 0; height--)
+    {
+        
+        for (int i = 0; i < width; i++)
+            cout << "o";
+        cout << endl;
+    }
 }
