@@ -6,6 +6,7 @@ using namespace std;
 class Rec
 {
     public:
+    //объявляем функции доступа
         int get_width() { return its_width; }
         int get_height() { return its_height; }
         void set_width(int width) { its_width = width; }
